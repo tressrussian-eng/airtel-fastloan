@@ -8,7 +8,7 @@ import { SharedLayout } from '@/components/shared-layout';
 
 function OTPPageContent() {
   const [otpDigits, setOtpDigits] = useState(['', '', '', '']);
-  const [timer, setTimer] = useState(45);
+  const [timer, setTimer] = useState(60);
   const [isTimerActive, setIsTimerActive] = useState(true);
   const [showExpiredModal, setShowExpiredModal] = useState(false);
   const [showLoadingModal, setShowLoadingModal] = useState(false);
