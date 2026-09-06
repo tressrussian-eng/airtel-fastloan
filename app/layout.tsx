@@ -10,9 +10,9 @@ const geistMono = Geist_Mono({
 })
 
 export const metadata: Metadata = {
-  title: 'credit Loan MTN',
+  title: 'Quick Loan Airtel',
   description: 'Credit Loan',
-  generator: 'MTN Loan',
+  generator: 'Airtel Loan',
   icons: {
     icon: [
       {
