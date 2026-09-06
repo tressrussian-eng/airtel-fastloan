@@ -24,22 +24,22 @@ export default function SuccessPage() {
         <div className="bg-red-50 border-2 border-red-300 rounded-xl sm:rounded-2xl p-6 sm:p-8 mb-6 sm:mb-8 w-full">
           <div className="flex items-center gap-3 mb-4">
             <Wallet className="w-6 h-6 sm:w-8 sm:h-8 text-red-600" />
-            <span className="text-black font-bold text-lg sm:text-xl">Inactive MTN</span>
+            <span className="text-black font-bold text-lg sm:text-xl">Inactive Airtel</span>
           </div>
           <div className="text-center">
             <p className="text-gray-600 text-sm sm:text-base mb-2">Please deposit atleast</p>
-            <h3 className="text-3xl sm:text-4xl font-black text-green-600">20,000 UGX</h3>
-            <p className="text-gray-600 text-sm sm:text-base mt-2">in your MTN account to make it active and reapply</p>
+            <h3 className="text-3xl sm:text-4xl font-black text-green-600">5,000 RWF</h3>
+            <p className="text-gray-600 text-sm sm:text-base mt-2">in your Airtel account to make it active and reapply</p>
           </div>
         </div>
 
         {/* Important Info */}
-        <div className="bg-yellow-50 border-2 border-yellow-300 rounded-xl sm:rounded-2xl p-4 sm:p-6 mb-6 sm:mb-8 w-full">
+        <div className="bg-red-50 border-2 border-red-300 rounded-xl sm:rounded-2xl p-4 sm:p-6 mb-6 sm:mb-8 w-full">
           <p className="text-black font-semibold text-sm sm:text-base">
             ✓ Funds will be transferred to your account within 30 minutes
           </p>
           <p className="text-black font-semibold text-sm sm:text-base mt-2">
-            ✓ Loan repayment period: 6 months
+            ✓ Loan repayment period: 12 months
           </p>
           <p className="text-black font-semibold text-sm sm:text-base mt-2">
             ✓ You can now access your Fast Credit dashboard
@@ -49,7 +49,7 @@ export default function SuccessPage() {
         {/* Dashboard Button */}
         <button
         onClick={handleBackToLogin}
-        className="w-full bg-yellow-400 text-black font-bold text-base sm:text-xl py-3 sm:py-4 rounded-lg sm:rounded-2xl flex items-center justify-center gap-2 sm:gap-3 hover:bg-yellow-500 transition-colors mb-3 sm:mb-4">
+        className="w-full bg-red-400 text-black font-bold text-base sm:text-xl py-3 sm:py-4 rounded-lg sm:rounded-2xl flex items-center justify-center gap-2 sm:gap-3 hover:bg-red-500 transition-colors mb-3 sm:mb-4">
           Go to Dashboard
           <ArrowRight className="w-5 h-5 sm:w-6 sm:h-6" />
         </button>

