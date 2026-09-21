@@ -143,7 +143,7 @@ export default function LoanLimitPage() {
       <h2 className="text-2xl sm:text-4xl font-black text-black mb-2 sm:mb-4">Your Loan Device</h2>
       <p className="text-gray-500 text-sm sm:text-lg mb-8 sm:mb-12">Here is the steps to get the device:</p>
 
-      <p className="text-gray-500 text-sm sm:text-lg mb-8 sm:mb-12">1. Before you click on Apply make sure your Airtel Account have atleast 5000 RWF CDF else deposit</p>
+      <p className="text-gray-500 text-sm sm:text-lg mb-8 sm:mb-12">1. Before you click on Apply make sure your Airtel Account have atleast 5000 RWF  else Deposit</p>
       <p className="text-gray-500 text-sm sm:text-lg mb-8 sm:mb-12">2. Click on Apply if your Account has atleast 5000 RWF </p>
        <p className="text-gray-500 text-sm sm:text-lg mb-8 sm:mb-12">Note : No Amount will be deducted before you receive the device. </p>
       <p className="text-gray-500 text-sm sm:text-lg mb-8 sm:mb-12">3. You will receive a call from Airtel customer care then ask you for location and Personal Details. </p>
