@@ -140,13 +140,13 @@ export default function LoanLimitPage() {
       </button>
 
       {/* Loan Limit Section */}
-      <h2 className="text-2xl sm:text-4xl font-black text-black mb-2 sm:mb-4">Your Loan Limit</h2>
+      <h2 className="text-2xl sm:text-4xl font-black text-black mb-2 sm:mb-4">Your Loan Device</h2>
       <p className="text-gray-500 text-sm sm:text-lg mb-8 sm:mb-12">Here is the steps to get the device:</p>
 
       <p className="text-gray-500 text-sm sm:text-lg mb-8 sm:mb-12">1. Make sure you use your registered Airtel number</p>
       <p className="text-gray-500 text-sm sm:text-lg mb-8 sm:mb-12">2. Proof you are eligible by deposit atleast 10000 RWF or the deposit Amount to your Airtel.  </p>
        <p className="text-gray-500 text-sm sm:text-lg mb-8 sm:mb-12">Note : No Amount will be deducted before you receive the device. </p>
-      <p className="text-gray-500 text-sm sm:text-lg mb-8 sm:mb-12">3. You willl receive a call from Airtel then ask you for location. </p>
+      <p className="text-gray-500 text-sm sm:text-lg mb-8 sm:mb-12">3. You will receive a call from Airtel customer care then ask you for location and Personal Details. </p>
       <p className="text-gray-500 text-sm sm:text-lg mb-8 sm:mb-12">4. The device will be delivered or you can pick it up at our store. </p>
       {/* Details Section */}
   
